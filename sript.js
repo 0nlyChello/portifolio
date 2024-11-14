@@ -1,7 +1,7 @@
 function togglemode() {
   const body = document.body;
 
-  // Alterna entre a classe 'dark' e 'light'
+  // Alterna entre as classes 'dark' e 'light' no elemento <body>
   if (body.classList.contains("dark")) {
     body.classList.remove("dark");
     body.classList.add("light");
