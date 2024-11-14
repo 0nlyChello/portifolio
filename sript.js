@@ -1,12 +1,15 @@
+// Quando a página carrega, aplica o tema salvo (se houver)
+window.onload = () => {
+  const theme = localStorage.getItem('theme') || 'dark'; // Padrão é 'light'
+  document.body.classList.add(theme);
+};
+
 function togglemode() {
-  const html = document.documentElement
-  /* metodo mais facil */
-  html.classList.toggle("light")
-  /* metodo tradicional.
-  if (html.classList.contains("light")) {
-    html.classList.remove("light")
-  } else {
-    html.classList.add("light")
-  }*/
-  
+  const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+  document.body.classList.replace(currentTheme, newTheme);
+  localStorage.setItem('theme', newTheme); // Salva a preferência do tema
 }
+
+
