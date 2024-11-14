@@ -80,11 +80,11 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   left: 0;
-  animation: none; /* Sem animação inicialmente */
+  transition: left 0.2s ease; /* Adiciona transição para a propriedade 'left' */
 }
 
 .light #switch button {
-  animation: slide-mode-buttom-in 0.2s forwards; /* Quando for light, anima da esquerda para a direita */
+  left: 32px; /* Posição final para o modo claro */
 }
 
 #switch button:hover {
@@ -101,26 +101,6 @@ body * {
   display: block;
   border-radius: 9999px;
 }
-
-/* Definição das animações */
-@keyframes slide-mode-buttom-in {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 32px; /* A posição final da animação */
-  }
-}
-
-@keyframes slide-mode-buttom-out {
-  0% {
-    left: 32px; /* A posição inicial do botão */
-  }
-  100% {
-    left: 0;
-  }
-}
-
 
 /* Links */
 ul {
