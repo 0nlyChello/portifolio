@@ -33,7 +33,6 @@ body {
   /*backgroud: 1ºcolor 2°image 3°repeat  4°position/5°size */
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
-  transition: background-color 2s ease; /* Transição suave de 0.5 segundos */
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -152,7 +151,7 @@ footer {
 }
 /* media queries*/
 @media (min-width: 700px) {
-  :root {
+  .dark {
     --bg-url: url(./assets/bg-desktop.jpg);
   }
   .light {
