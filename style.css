@@ -31,7 +31,8 @@
 body {
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
- 
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
 
 #container {
