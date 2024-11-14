@@ -121,6 +121,7 @@ ul li a {
   -webkit-backdrop-filter: blur(4px);
   text-decoration: none;
   font-weight: 500;
+  color: var(--text-color); /* Cor da fonte como estava antes */
   transition: background 0.2s, border 0.2s;
 }
 
