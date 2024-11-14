@@ -68,6 +68,7 @@ body * {
   width: 64px;
   margin: 4px auto;
 }
+
 #switch button {
   width: 32px;
   height: 32px;
@@ -79,14 +80,17 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   left: 0;
-  animation: slide-mode-buttom-out 0.2s;
+  animation: none; /* Sem animação inicialmente */
 }
+
 .light #switch button {
-  animation: slide-mode-buttom-in 0.2s forwards;
+  animation: slide-mode-buttom-in 0.2s forwards; /* Quando for light, anima da esquerda para a direita */
 }
+
 #switch button:hover {
   outline: 8px solid var(--highlight-color);
 }
+
 #switch span {
   width: 64px;
   height: 24px;
@@ -97,6 +101,26 @@ body * {
   display: block;
   border-radius: 9999px;
 }
+
+/* Definição das animações */
+@keyframes slide-mode-buttom-in {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 32px; /* A posição final da animação */
+  }
+}
+
+@keyframes slide-mode-buttom-out {
+  0% {
+    left: 32px; /* A posição inicial do botão */
+  }
+  100% {
+    left: 0;
+  }
+}
+
 
 /* Links */
 ul {
