@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="dark">
+<html lang="pt-BR" class="dark">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,47 +11,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevLinks</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      /* Estilos para o contêiner e botão de exibição de PDF */
+      #pdf-container {
+          display: none; /* Oculta o PDF no início */
+          margin-top: 20px;
+      }
+      #toggle-button {
+          padding: 10px 20px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+      }
+    </style>
   </head>
   <body>
     <div id="container">
       <div id="profile">
-        <img
-        src="./assets/avatar.jpg"
-          alt="foto da marca"
-        />
+        <img src="./assets/avatar.jpg" alt="foto da marca" />
         <p>Portifólio Juliane Würz</p>
       </div>
+
       <div id="switch" onclick="togglemode()">
         <button></button>
         <span> </span>
       </div>
+
       <ul>
         <li>
-          <a
-            href="https://www.linkedin.com/in/juliane-w-b691a6116/"
-            target="_blank"
-            >Linkedin</a
-          >
+          <a href="https://www.linkedin.com/in/juliane-w-b691a6116/" target="_blank">Linkedin</a>
         </li>
         <li>
-          <a href="https://www.instagram.com/eujuliwurz/" target="_blank"
-            >Instagram</a
-          >
+          <a href="https://www.instagram.com/eujuliwurz/" target="_blank">Instagram</a>
         </li>
+
+        <!-- Botão para exibir o PDF -->
         <li>
-          <embed src="./assets/Consultoria-Estrategica-ProSul-Distribuidora-de-EPIs sem marca dagua.pdf" type="application/pdf" width="100%" height="600px" />
-            >Apresentação</a
-          >
+          <button id="toggle-button" onclick="togglePDF()">Abrir PDF de Apresentação</button>
         </li>
+
+        <!-- Contêiner do PDF que será exibido ao clicar no botão -->
+        <div id="pdf-container">
+          <embed src="./assets/Consultoria-Estrategica-ProSul-Distribuidora-de-EPIs sem marca dagua.pdf" 
+                 type="application/pdf" width="100%" height="600px" />
+        </div>
+
         <li>
-          <a href="" target=
-            >coming soon</a
-          >
+          <a href="" target="_blank">coming soon</a>
         </li>
       </ul>
-     
+
       <footer>Feito com carinho por Wurz Be❤️</footer>
     </div>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -60,6 +74,23 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="sript.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Script para alternar a exibição do PDF -->
+    <script>
+      function togglePDF() {
+          const pdfContainer = document.getElementById('pdf-container');
+          const button = document.getElementById('toggle-button');
+
+          // Alterna a exibição do contêiner PDF
+          if (pdfContainer.style.display === "none") {
+              pdfContainer.style.display = "block";
+              button.innerText = "Fechar PDF";
+          } else {
+              pdfContainer.style.display = "none";
+              button.innerText = "Abrir PDF de Apresentação";
+          }
+      }
+    </script>
   </body>
 </html>
