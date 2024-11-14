@@ -11,16 +11,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevLinks</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      /* Estilos para os temas */
+      .dark {
+        background-color: #121212;
+        color: white;
+      }
+      .light {
+        background-color: white;
+        color: black;
+      }
+      #switch button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div id="container">
       <div id="profile">
-        <img src="./assets/foto.juli.jpg" alt="foto da marca" />
+        <img src="./assets/avatar.jpg" alt="foto da marca" />
         <p>Portifólio Juliane Würz</p>
       </div>
 
+      <!-- Botão para trocar o tema -->
       <div id="switch" onclick="togglemode()">
-        <button></button>
+        <button>Trocar Tema</button>
         <span> </span>
       </div>
 
@@ -34,7 +53,9 @@
 
         <!-- Link para abrir o PDF em uma nova guia -->
         <li>
-          <a href="./assets/Consultoria-Estrategica-ProSul-Distribuidora-de-EPIs sem marca dagua.pdf" target="_blank">Apresentação</a>
+          <a href="./assets/Consultoria-Estrategica-ProSul-Distribuidora-de-EPIs sem marca dagua.pdf" target="_blank">
+            <button id="open-pdf-button">Abrir PDF de Apresentação</button>
+          </a>
         </li>
 
         <li>
@@ -53,6 +74,8 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="script.js"></script>
+
+    <!-- Certifique-se de que o script.js esteja sendo carregado corretamente -->
+    <script src="script.js"></script> <!-- Este é o arquivo que contém a função togglemode() -->
   </body>
 </html>

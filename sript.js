@@ -1,12 +1,12 @@
 function togglemode() {
-  const html = document.documentElement
-  /* metodo mais facil */
-  html.classList.toggle("light")
-  /* metodo tradicional.
-  if (html.classList.contains("light")) {
-    html.classList.remove("light")
+  const body = document.body;
+
+  // Alterna entre a classe 'dark' e 'light'
+  if (body.classList.contains("dark")) {
+    body.classList.remove("dark");
+    body.classList.add("light");
   } else {
-    html.classList.add("light")
-  }*/
-  
+    body.classList.remove("light");
+    body.classList.add("dark");
+  }
 }
