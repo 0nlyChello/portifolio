@@ -1,6 +1,6 @@
 // Quando a página carrega, aplica o tema salvo (se houver)
 window.onload = () => {
-  const theme = localStorage.getItem('theme') || 'dark'; // Padrão é 'light'
+  const theme = localStorage.getItem('theme') || 'dark'; // Padrão é 'dark'
   document.body.classList.add(theme);
 };
 
